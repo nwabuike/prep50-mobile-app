@@ -521,6 +521,7 @@ input[type="submit"]:hover {
 	display: inline-block;
 	font-size: 18px;
 	height: 36px;
+	margin-bottom: 100px;
 	line-height: 36px;
 	text-align: center;
 	text-decoration: none;
@@ -542,6 +543,7 @@ input[type="submit"]:hover {
 	display: inline-block;
 	font-size: 18px;
 	height: 36px;
+	margin-bottom: 300px;
 	line-height: 36px;
 	text-align: center;
 	text-decoration: none;
@@ -568,11 +570,12 @@ a.button-about {
 	text-decoration: none; 
 	background: rgba(0,0,125,0.0); 
 	margin: 28px 0;
-	padding: .7em 1.5em; 
+	padding: 2.7em 1.5em; 
 	outline: none; 
 	border:1px solid #fff;
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
+	
 } 
 a.button-about:hover { 
 	background:rgba(255,255,255,0.3);
@@ -878,7 +881,7 @@ transform:rotate(0deg);
 #main .modal-toggle {
 	margin: 50px 0px;
 	left: 0;
-
+margin-bottom: 228px;
 	text-align: center;
 	width: 100%;
 }
@@ -901,10 +904,12 @@ transform:rotate(0deg);
 	text-align: center;
 }
 
+
 #modal2 .modal-toggle  {
 	margin-bottom: 42px;
 	text-align: center;
 }
+#modal
 
 
 /*********************
