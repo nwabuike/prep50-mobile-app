@@ -1,99 +1,4 @@
-/* ==============================================================
 
-	Project: 	Relax - Responsive Coming Soon Template
-	Info:		
-	Version: 	1.0
-	Author:		Art Sound Group
-	Profile:	https://themeforest.net/user/artsoundgroup
-
------------------------------------------------------------------
-					*** TABLE OF CONTENTS ***
------------------------------------------------------------------
-
-	1. Video Buttons
-	2. Reset
-	3. General styles
-	4. Basic Structure
-	5. Main
-	6. Modal page
-	7. No JS
-	8. Media
-
-
------------------------------------------------------------------
-					*** COLOR CODES ***
------------------------------------------------------------------
-	Mine text:			#fff
-	Buttons hover:		rgba(255,255,255,0.3)
-	Buttons solid:		rgba(255,255,255,0.8)
-	
------------------------------------------------------------------
-					*** TYPOGRAPHY ***
------------------------------------------------------------------
-	Body copy: Sansita,sans-serif;
-	
-=============================================================*/
-
-/*********************
-    - 1. Video Buttons -
-*********************/
-
-[class^="fa-"], [class*=" fa-"] {
-	font-family: FontAwesome;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.fa-play:before {
-	content: "\f04b";
-}
-.fa-pause:before {
-	content: "\f04c";
-}
-.fa-mute:before {
-	content: "\f1f7";
-}
-.fa-sound:before {
-	content: "\f0a2";
-}
-
-/*********************
-    - 2. Reset -
-*********************/
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
-	display: block;
-}
-
-audio,
-canvas,
-video {
-	display: inline-block;
-}
-
-audio:not([controls]) {
-	display: none;
-	height: 0;
-}
-
-[hidden] {
-	display: none;
-}
 
 html {
 	font-size: 100%;
@@ -115,10 +20,79 @@ body {
 	line-height: 1.75;
 	margin: 0;
 }
+/* my new button*/
+button{
+	margin: 0px;
+	width: 90px;
+	height: 90px;
+	
+	display: inline-block;
+	font-size: 18px;
+	padding: 20px;
+	line-height: 36px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	
+}
+
+
+@media screen and (min-width: 480px){
+	.prep50 {
+		background-color: rgba(255, 0, 0, 0.5);
+		color: #fff;
+		
+		width: 80px;
+		height: 80px;
+		margin: 0px;
+		border: none;
+		text-decoration: none;
+		margin-top: -20px;
+		position: relative;
+		margin-top: 1px;
+		margin-right: 75px;
+	}
+
+	.course {
+		background-color: rgba(0, 38, 255, 0.5);
+		color: #fff;
+		width: 80px;
+		border-radius: 10px;
+		margin: 0px;
+		position: relative;
+		margin-top: 10px;
+		margin-left: 70px;
+	}
+
+	.Jambreg {
+		background-color: teal;
+		color: #fff;
+		width: 80px;
+		height: 80px;
+		margin: 0px;
+		margin-top: 10px;
+		margin-left: 70px;
+	}
+
+	.reprint {
+		background-color: teal;
+		color: #fff;
+		width: 80px;
+		height: 80px;
+		margin: 0;
+		margin-top: 40px;
+		margin-right: 75px;
+
+	}
+
+}
 
 a {
 	color: #dadada;
 	text-decoration: underline;
+	
 }
 
 a:active,
@@ -205,39 +179,6 @@ img {
 	-ms-interpolation-mode: bicubic;
 }
 
-form {
-	margin: 0;
-}
-
-button,
-input,
-textarea {
-	border-radius: 0;
-	font-size: 14px;
-	margin: 0;
-	max-width: 100%;
-	vertical-align: baseline;
-	-webkit-box-sizing:	border-box;
-	-moz-box-sizing:	border-box;
-	box-sizing:			border-box;
-}
-
-button,
-input {
-	line-height: normal;
-}
-
-button,
-input[type="submit"] {
-	-webkit-appearance: button;
-	cursor: pointer;
-}
-
-textarea {
-	overflow: auto;
-	vertical-align: top;
-}
-
 /*********************
     - 3. General styles -
 *********************/
@@ -264,9 +205,6 @@ textarea {
 }
 
 /* Grid */
-.row {
-	margin-left: -48px;
-}
 
 .one {
 	-webkit-box-sizing:	border-box;
@@ -306,88 +244,6 @@ textarea {
 	width: 33%;
 }
 
-/* Forms */
-input,
-textarea {
-	background: #fff;
-	background: rgba(255,255,255,0.2);
-	border: 1px solid rgba(255,255,255,0.5);
-	color: #fff;
-	font-weight: 700;
-	letter-spacing: 1px;
-	padding: 12px;
-	text-transform: uppercase;
-}
-
-input:focus,
-textarea:focus {
-	outline: 0;
-}
-
-button,
-input[type="submit"] {
-	background:rgba(0,0,125,0.0);
-	-webkit-transition:	all 0.3s;
-	-moz-transition:	all 0.3s;
-	transition:			all 0.3s;
-}
-
-button:hover,
-button:focus,
-input[type="submit"]:focus,
-input[type="submit"]:hover {
-	background: rgba(255,255,255,0.3);
-	color: #fff;
-	outline: 0;
-}
-
-.form-field {
-	position: relative;
-}
-
-.form-field label {
-	font-size: 12px;
-}
-
-.form-field span.error {
-	background: #030046;
-	background: rgba(255,0,0,0.5);
-	border: 1px solid #fff;
-	color: #fff;
-	font-size: 10px;
-	letter-spacing: 1px;
-	padding: 6px;
-	position: absolute;
-	right: 6px;	
-	text-transform: uppercase;
-	top: -14px;
-}
-
-.form-wrap .loading {
-	height: 42px;
-	margin: 0 auto 28px;
-	text-align: center;
-}
-
-.form-wrap .success {
-	color: #dadada;
-	min-height: 42px;
-	text-align: center;
-}
-
-/* Placeholder text color */
-::-webkit-input-placeholder {
-	color: #fff;
-}
-
-::-moz-placeholder {
-	color: #fff;
-	opacity: 1;
-}
-
-.placeholder {
-	color: #fff;
-}
 
 /* Responsive images */
 .wrap img {
@@ -408,16 +264,6 @@ input[type="submit"]:hover {
 	margin-bottom: 14px;
 	text-align: left;
 }
-
-#modal .section-title {
-	margin-bottom: 42px;
-}
-
-#modal2 .section-title {
-	margin-bottom: 42px;
-}
-
-
 
 .main-phrase
 {
@@ -468,7 +314,10 @@ input[type="submit"]:hover {
 	text-align:center;
 	margin-top:20px;
 }
-
+a{
+	width:80px;
+	height: 80px;
+}
 .social a
 {
 	display:inline-block;
@@ -520,12 +369,11 @@ input[type="submit"]:hover {
 	color: #fff;
 	display: inline-block;
 	font-size: 18px;
-	height: 36px;
-	margin-bottom: 100px;
+	width: 85px;
 	line-height: 36px;
 	text-align: center;
 	text-decoration: none;
-	width: 36px;
+	height: 85px;
 	-webkit-transition:	all 0.3s ease;
 	-moz-transition:	all 0.3s ease;
 	transition:			all 0.3s ease;
@@ -542,12 +390,11 @@ input[type="submit"]:hover {
 	color: #fff;
 	display: inline-block;
 	font-size: 18px;
-	height: 36px;
-	margin-bottom: 300px;
+	
 	line-height: 36px;
 	text-align: center;
 	text-decoration: none;
-	width: 36px;
+	
 	-webkit-transition:	all 0.3s ease;
 	-moz-transition:	all 0.3s ease;
 	transition:			all 0.3s ease;
@@ -567,15 +414,17 @@ input[type="submit"]:hover {
 
 a.button-about {
 	color: #fff; 
+	display: inline-block;
 	text-decoration: none; 
 	background: rgba(0,0,125,0.0); 
-	margin: 28px 0;
-	padding: 2.7em 1.5em; 
+	margin: 20px 0;
+	padding: 6em  7em; 
 	outline: none; 
+	position: relative;
+	align-content: center;
 	border:1px solid #fff;
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
-	
 } 
 a.button-about:hover { 
 	background:rgba(255,255,255,0.3);
@@ -587,6 +436,8 @@ a.button-about:hover {
 a.button-about:active { 
 	background:rgba(255,255,255,0.3); 
 	border:1px solid #fff;
+	width:85px;
+	height: 85px;
 	-webkit-border-radius:5%;
 	-moz-border-radius:5%;
   }
@@ -715,6 +566,8 @@ transform:rotate(0deg);
 	background: rgba(31,31,31,0.8);
 	display: none;
 	left: 0;
+	width: 85px;
+	height: 85px;
 	min-height: 100%;
 	position: absolute;
 	right: 0;
@@ -727,7 +580,8 @@ transform:rotate(0deg);
 	background: rgba(31,31,31,0.8);
 	display: none;
 	left: 0;
-	min-height: 100%;
+	width: 85px;
+	height: 85px;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -737,11 +591,13 @@ transform:rotate(0deg);
 
 
 #modal .inner {
-	max-width: 612px;
+	max-width: 85px;
+	
 }
 
 #modal2 .inner {
-	max-width: 612px;
+	max-width: 85px;
+	
 }
 
 
@@ -795,37 +651,6 @@ transform:rotate(0deg);
   flex-direction: column;
 }
 
-/* Countdown */
-.countdown-row {
-	display: block;
-	text-align: center;
-}
-
-.countdown-section {
-	color: #dadada;
-	display: inline-block;
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: 1px;
-	padding: 0px 0px 0px;
-	text-align: center;
-	width: 15%;
-	-webkit-box-sizing:	border-box;
-	-moz-box-sizing:	border-box;
-	box-sizing:			border-box;
-}
-
-
-
-.countdown-amount {
-	color: #fff;
-	display: block;
-	font-size: 50px;
-	font-weight: 700;
-	letter-spacing: normal;
-	line-height: 1;
-	padding-bottom: 10px;
-}
 
 /* subscribe */
 #subscribe {
@@ -879,21 +704,22 @@ transform:rotate(0deg);
 
 /* Modal toggle */
 #main .modal-toggle {
-	margin: 50px 0px;
+	margin: 20px 0px;
 	left: 0;
-margin-bottom: 228px;
 	text-align: center;
 	width: 100%;
+	margin-bottom: 20px;
+
 }
 
-.modal-note .modal2-note {
-	color: #dadada;
-	display: block;
+/* #modal-open {
+	
 	font-size: 14px;
-	letter-spacing: 1px;
+	margin-top: 170px;
+	 margin-left: 100px; 
 	text-align: center;
-	text-transform: uppercase;
-}
+	
+} */
 
 /*********************
     - 6. Modal page: About Us -
@@ -904,12 +730,10 @@ margin-bottom: 228px;
 	text-align: center;
 }
 
-
 #modal2 .modal-toggle  {
 	margin-bottom: 42px;
 	text-align: center;
 }
-#modal
 
 
 /*********************
@@ -949,12 +773,54 @@ margin-bottom: 228px;
 	h1 {
 		font-size: 30px;
 	}
-	.countdown-section {
-		padding: 28px 6px 28px;
+	/* #reprint{
+		position: relative;
+		bottom:200px;
+		
 	}
-	.countdown-amount {
-		font-size: 22px;
+	#jambreg {
+		position: relative;
+		bottom: 200px;
+		
+	/* } */
+	#modal-open{
+		width:85px;
+		height: 85px;
+		margin: 0px;
+		margin-top: -70px;
+		margin-right: 50px;
+		position: relative;
+		
 	}
+	#modal2-open {
+		
+		margin: 0px;
+		margin-top:-170px;
+		margin-left: 170px;
+		position: relative;
+
+	}
+	#modal3-open {
+		
+		
+		margin-top: -150px;
+		margin-right: 50px;
+		position: relative;
+
+	}
+	a{
+	width:50px;
+	height: 85px;
+	}
+
+	#modal4-open {
+		
+		
+		margin-top: 2px;
+		margin-left: 170px;
+		position: relative;
+
+	} */
 	#newsletter-form .form-field {
 		margin: 0 0 14px;
 	}
@@ -963,6 +829,10 @@ margin-bottom: 228px;
 		position: static;
 		right: auto;
 		top: auto;
+	}
+	a {
+		width: 85px;
+		height: 85px;
 	}
 }
 
@@ -973,6 +843,10 @@ margin-bottom: 228px;
 	}
 	.countdown-amount {
 		font-size: 16px;
+	}
+	a{
+		width: 85px;
+		height: 85px;
 	}
 }
 
